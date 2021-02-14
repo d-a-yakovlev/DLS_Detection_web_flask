@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+<head>DLS_Detection</head>
+{% block content %}
+<center>
+    <p class="text">DLS Object Detection - d-a-yakovlev </p>
+    <p>Загрузите картинку, получите результат)
+    <div class="upload-form">
+      <form action = "/uploader" method = "POST" 
+        enctype = "multipart/form-data">
+        <input type = "file" name = "file" />
+        <input type = "submit"/>
+      </form>
+    </div>
+</center> 
+{% endblock %}
