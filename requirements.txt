@@ -7,3 +7,4 @@ flask
 seaborn
 pillow
 gunicorn
+libsm6
