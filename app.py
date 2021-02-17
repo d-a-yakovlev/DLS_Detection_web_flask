@@ -14,9 +14,11 @@ import sys
 
 print("sys argv is : {} ",sys.argv)
 try:
-  flags.FLAGS(sys.argv.remove('log-file'))
+  args=sys.argv.remove('log-file')
 except:
-  flags.FLAGS(sys.argv)  
+  args=sys.argv 
+
+flags.FLAGS(args)
 
 
 classes_path = './data/labels/coco.names'
