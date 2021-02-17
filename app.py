@@ -14,7 +14,7 @@ import sys
 
 print("sys argv is : {} ",sys.argv)
 try:
-  args=sys.argv.remove('log-file')
+  args=sys.argv.remove('--log-file=-')
 except:
   args=sys.argv 
 
