@@ -35,13 +35,13 @@ class BatchNormalization(tf.keras.layers.BatchNormalization):
 
 
 yolo_max_boxes = 10
-yolo_iou_threshold = 0.5
-yolo_score_threshold = 0.5
+yolo_iou_threshold = 0.3
+yolo_score_threshold = 0.3
 
 # customize your model through the following parameters
 flags.DEFINE_integer('yolo_max_boxes', 10, 'maximum number of detections at one time')
-flags.DEFINE_float('yolo_iou_threshold', 0.5, 'iou threshold')
-flags.DEFINE_float('yolo_score_threshold', 0.5, 'score threshold')
+flags.DEFINE_float('yolo_iou_threshold', 0.3, 'iou threshold')
+flags.DEFINE_float('yolo_score_threshold', 0.3, 'score threshold')
 
 
 

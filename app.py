@@ -104,5 +104,8 @@ def get_image():
         return render_template("uploaded.html", display_detection = image_name,fname = image_name)
     except FileNotFoundError:
         abort(404)
+
+    os.remove(format(output_path + image_name))
+
 if __name__ == '__main__':
     app.run(debug=True)
