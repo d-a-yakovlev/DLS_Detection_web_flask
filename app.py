@@ -12,7 +12,11 @@ from flask import Flask,render_template, request, Response, jsonify, send_from_d
 import os
 import sys
 
-flags.FLAGS(sys.argv)
+print("sys argv is : {} ",sys.argv)
+try:
+  flags.FLAGS(sys.argv.remove('log-file'))
+except:
+  flags.FLAGS(sys.argv)  
 
 
 classes_path = './data/labels/coco.names'
