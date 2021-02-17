@@ -20,7 +20,7 @@ from tensorflow.keras.losses import (
     sparse_categorical_crossentropy
 )
 #from batch_norm import BatchNormalization
-from utils import broadcast_iou
+from .utils import broadcast_iou
 
 class BatchNormalization(tf.keras.layers.BatchNormalization):
     """
