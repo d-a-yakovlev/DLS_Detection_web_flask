@@ -20,6 +20,8 @@ flags.DEFINE_string('tfrecord', None, 'tfrecord instead of image')
 flags.DEFINE_string('output', './detections/', 'path to output folder')
 flags.DEFINE_integer('num_classes', 80, 'number of classes in the model')
 
+flags.DEFINE_string('log-file','','')
+
 def main(_argv):
     physical_devices = tf.config.experimental.list_physical_devices('GPU')
     if len(physical_devices) > 0:
