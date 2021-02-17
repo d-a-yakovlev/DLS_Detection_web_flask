@@ -19,8 +19,20 @@ from tensorflow.keras.losses import (
     binary_crossentropy,
     sparse_categorical_crossentropy
 )
-from batch_norm import BatchNormalization
+#from batch_norm import BatchNormalization
 from utils import broadcast_iou
+
+class BatchNormalization(tf.keras.layers.BatchNormalization):
+    """
+    Make trainable=False freeze BN for real (the og version is sad)
+    """
+
+    def call(self, x, training=False):
+        if training is None:
+            training = tf.constant(False)
+        training = tf.logical_and(training, self.trainable)
+        return super().call(x, training)
+
 
 yolo_max_boxes = 10
 yolo_iou_threshold = 0.5
