@@ -7,4 +7,5 @@
 и открыть в браузере localhost:5000
 
 # Открыть в браузере по ссылке через Heroku
-Ссылка будет доступна когда deploy совершён.
+Ссылка будет доступна:
+https://d-a-yakovlev-detection.herokuapp.com/
