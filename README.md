@@ -10,4 +10,4 @@
 Ссылка доступна:
 https://d-a-yakovlev-detection.herokuapp.com/
 
-*Картинки для теста можно взять из папки data/images/ 
+# *Картинки для теста можно взять из папки data/images/ 
